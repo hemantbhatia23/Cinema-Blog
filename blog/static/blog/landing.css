@@ -1,0 +1,11 @@
+body {
+    background:url('https://previews.123rf.com/images/krekdm/krekdm1607/krekdm160700086/59591887-seamless-cinema-pattern-can-be-used-for-wallpaper-website-background-wrapping-paper-cinema-vector-br.jpg');
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    padding-top: 40vh;
+}
+h1{
+    color: black;
+    font-size: 60px;
+}
