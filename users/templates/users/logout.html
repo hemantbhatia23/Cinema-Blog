@@ -2,10 +2,11 @@
 {% load crispy_forms_tags %}
 {% block content %}
     
-    <h2>You have been Logged Out! </h2>
+    <h2 class="text-success" style="background-color: white;">You have been Logged Out! </h2>
     <div class="border-top pt-3">
         <small class="text-muted">
             <a href="{% url 'login' %}"> <button class="btn btn-info btn-sm">Login Again </button></a>
         </small>
     </div>
+    <br>
 {% endblock content %}
