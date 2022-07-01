@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 import os
 import json
+import django_heroku
+import dj_database_url
 from decouple import config
 from django.core.exceptions import ImproperlyConfigured
 
@@ -29,9 +31,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-*^qoj^nb^s$y#g_0vu+c27^q+&)1da)%6srxvl_a57vqoj^58g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['https://cinemamoviesapp.herokuapp.com/']
+ALLOWED_HOSTS = ['localhost','cinemamoviesapp.herokuapp.com']
 
 
 # Application definition
