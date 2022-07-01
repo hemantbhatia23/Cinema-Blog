@@ -3,8 +3,10 @@ boto3==1.24.21
 botocore==1.27.21
 certifi==2022.6.15
 distlib==0.3.4
+dj-database-url==0.5.0
 Django==4.0.4
 django-crispy-forms==1.14.0
+django-heroku==0.3.1
 django-markdown==0.8.4
 django-storages==1.12.3
 filelock==3.7.1
@@ -14,6 +16,7 @@ Markdown==3.3.7
 Pillow==9.1.1
 pipenv==2022.6.7
 platformdirs==2.5.2
+psycopg2==2.9.3
 python-dateutil==2.8.2
 python-decouple==3.6
 s3transfer==0.6.0
@@ -24,3 +27,4 @@ urllib3==1.26.9
 virtualenv==20.15.1
 virtualenv-clone==0.5.7
 waitress==2.1.2
+whitenoise==6.2.0
