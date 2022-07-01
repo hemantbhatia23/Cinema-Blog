@@ -29,9 +29,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-*^qoj^nb^s$y#g_0vu+c27^q+&)1da)%6srxvl_a57vqoj^58g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-ALLOWED_HOSTS = ['127.0.0.1','cinemamoviesapp.herokuapp.com']
-
+DEBUG = False
+ALLOWED_HOSTS = ['cinemamoviesapp.herokuapp.com']
+#'127.0.0.1'
 
 # Application definition
 
