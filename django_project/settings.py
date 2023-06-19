@@ -14,7 +14,6 @@ from pathlib import Path
 import os
 import json
 from decouple import config
-from django.core.exceptions import ImproperlyConfigured
 
 
 
@@ -29,8 +28,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-*^qoj^nb^s$y#g_0vu+c27^q+&)1da)%6srxvl_a57vqoj^58g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-ALLOWED_HOSTS = ['cinemamoviesapp.herokuapp.com']
+DEBUG = True
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost']
 #'127.0.0.1'
 
 # Application definition
@@ -86,12 +85,11 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd58bj0c1jsi3tk',
-        'HOST': 'ec2-23-23-151-191.compute-1.amazonaws.com',
-        'PORT': 5432,
-        'USER': 'yhuykifjirtkeu',
-        'PASSWORD': 'd7d07d9cf8ff361f18a2299cc1f98388468bbd0485c45a6f91828737e8bb546b'
-
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': config('PGPASSWORD'),
+        'HOST': 'containers-us-west-54.railway.app',
+        'PORT': '7366',
     }
 }
 
@@ -133,7 +131,8 @@ USE_TZ = True
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIR = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 
 

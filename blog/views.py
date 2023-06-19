@@ -28,7 +28,7 @@ class PostListView(ListView):
     
     model = Post
     template_name =  'blog/home.html' #<app>/<model>_<viewtype>.html
-    context_object_name = 'posts' #{{context default: objectlist}}
+    context_object_name = 'posts' #{{context_object_name default: object}}
     ordering = ['-date_posted']
     paginate_by = 5
 
@@ -73,11 +73,11 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         if self.request.user == post.author:
             return True
         return False
-    #for userpassestestmixin check if post user is trying to update is his own or not
+    #for userpassestestmixin check if post which the user is trying to update is his own or not
     
 
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
-    model = Post
+    model = Post 
     success_url = '/'
 
     def test_func(self):
